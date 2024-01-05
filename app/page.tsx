@@ -1,16 +1,5 @@
-import Image from "next/image";
-import Pagination from "./components/Pagination";
+import LatestIssues from "./LatestIssues";
 
-interface Props {
-  searchParams: { page: string };
-}
-
-export default function Home({ searchParams }: Props) {
-  return (
-    <Pagination
-      currentPage={parseInt(searchParams.page)}
-      itemCount={100}
-      pageSize={10}
-    />
-  );
+export default function Home() {
+  return <LatestIssues />;
 }
